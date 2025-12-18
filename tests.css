@@ -22,6 +22,8 @@ body
   background-size: 100% 100%, 150px 150px;
   background-repeat: no-repeat, repeat;
 }
+
+
 header{
   position: sticky;
   top: 0;
@@ -44,7 +46,7 @@ header::before{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap:0.5rem;
 }
 
 
@@ -56,7 +58,7 @@ header::before{
 
 .arr-down
 {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .logo 
@@ -94,7 +96,7 @@ header::before{
 
 .main-nav a 
 {
-  color: #d8d8ff;
+  color: #c7c7e6;
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;
@@ -133,8 +135,6 @@ header::before{
   display: block;
 }
 
-
-/* GRUP BLOKLARI (Analysts / Diplomats mantığının Enneagram versiyonu) */
 .ennea-group + .ennea-group {
   margin-top: 1.5rem;
 }
@@ -202,69 +202,166 @@ header::before{
 
 main 
 {
-  padding: 0 1.5rem;
-  margin: 2.5rem auto 3rem;
-  max-width: 1000px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem; 
 }
-
-.ana 
+.start img
 {
-  background: #232222e6;
-  padding: 2rem 1.75rem 2.25rem;
-  border-radius: 18px;
-  border: 1px double #ffffff0f;
-  
+  height: 140px;
+  width: 140px;
+  margin-left: 13.5rem;
 }
-.ana h1 
-{
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.ana p 
+.start
 {
   color: #c7c7e6;
-  max-width: 36rem;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0rem 15rem 5rem;
+  margin:0;
 }
-
-
-.grid {
-  margin-top: 1.75rem;
-  display: grid;
-  gap: 1.25rem 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-.grid img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.grid img.full {
-  height: auto;
-  object-fit: contain;
-}
-
-
-.grid a
+.test
 {
+  padding: 2rem 4rem 5rem;
+  font-size:14px;
+  line-height: 1.75rem;
+}
+
+.likert{
+  display:flex;
+  align-items:center;
+  gap:3rem;
+  padding: 2rem 0rem 3.5rem;
+  flex-wrap: nowrap; 
+  border-bottom: 1px solid rgb(138, 138, 138);
+}
+
+.side{
+  font-size:22px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.agree{ color:#36d28b; }
+.disagree{ color:#cc4949; }
+
+.scale{
+  display:flex;
+  gap:2.5rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  border-radius:50%;
+  border:3px solid;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  background:rgba(0,0,0,.25);
+  transition:.15s ease;
+}
+
+.btn::after{
+  content: "✓";
+  opacity: 0;  
+  color: #c7c7c7;
+  font-weight: 900;
+  line-height: 1;
+  font-size:30px;
+}
+
+.btn.green{ 
+  border-color:#36d28b;
+  width:70px;
+  height:70px;
+}
+.btn.green.active{
+  background:#36d28b;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.light-green
+{
+  border-color:#6ecea3;
+  width:60px;
+  height:60px;
+}
+.btn.light-green.active{
+  background:#6ecea3;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.mid-green
+{
+  border-color:#739d8a;
+  width:50px;
+  height:50px;
+}
+.btn.mid-green.active{
+  background:#739d8a;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.mid{ 
+  border-color:#6a6a6a;
+  width: 40px;
+  height:40px; 
+}
+.btn.mid.active{
+  background:#6a6a6a;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.mid-red
+{
+  border-color:#a77575;
+  width:50px;
+  height:50px;
+}
+.btn.mid-red.active{
+  background:#a77575;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.light-red
+{
+  border-color:#c46161;
+  width:60px;
+  height:60px;
+}
+.btn.light-red.active{
+  background:#c46161;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.btn.red{ 
+  border-color:#cc4949; 
+  width:70px;
+  height:70px;
+}
+.btn.red.active{
+  background:#cc4949;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+
+.btn:hover{
+  transform:translateY(-1px) scale(1.04);
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.btn.active::after{
+  opacity:1;
+}
+
+.continue {
   text-decoration: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 25px 40px;
+  border:0px;
+  border-radius: 50px;
+  font-size: 20px;
 }
 
-.zoomable {
-  width: 240px;
-  border-radius: 12px;
-  cursor: zoom-in;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.zoomable.zoomed {
-  transform: scale(1.6);
-  cursor: zoom-out;
-  box-shadow: 0 0 25px rgba(0,0,0,0.75);
-  z-index: 10;
-  position: relative;
+.continue:hover {
+  background-color: #45a049;
 }
 
 
