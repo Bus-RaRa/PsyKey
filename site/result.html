@@ -1,0 +1,631 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PsyKey | MBTI & Enneagram</title>
+
+    <script src="https://kit.fontawesome.com/b3ce117555.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="site/result.css">
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="brand">
+                <img src="logo.png" alt="PsyKey Logo" class="logo">
+                <h2 class="site-title">PSYKEY</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Ana Sayfa</a>
+    <ul class="demo-dropdown">
+        <li class="dropdown-item">
+            <a href="ennegram.html">Enneagram <i class="fa-solid fa-angle-down arr-down"></i></a>
+            
+            <ul class="ennea-menu">
+                <li class="ennea-group">
+                    <h3>Duygu Tipleri</h3>
+                    <p>İlişki ve yakınlık odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type2.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 2</span>
+                            <span class="ennea-code">Yardımcı</span>
+                        </a>
+                        <a href="types/type3.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 3</span>
+                            <span class="ennea-code">Başarılı</span>
+                        </a>
+                        <a href="types/type4.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 4</span>
+                            <span class="ennea-code">Özgün</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="ennea-group">
+                    <h3>Kafa Tipleri</h3>
+                    <p>Güvenlik ve zihinsel analiz odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type5.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 5</span>
+                            <span class="ennea-code">Araştırmacı</span>
+                        </a>
+                        <a href="types/type6.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 6</span>
+                            <span class="ennea-code">Sadık</span>
+                        </a>
+                        <a href="types/type7.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 7</span>
+                            <span class="ennea-code">Hevesli</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="ennea-group">
+                    <h3>Beden Tipleri</h3>
+                    <p>Kontrol, güç ve sezgisel tepki odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type8.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 8</span>
+                            <span class="ennea-code">Mücadeleci</span>
+                        </a>
+                        <a href="types/type9.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 9</span>
+                            <span class="ennea-code">Barışçıl</span>
+                        </a>
+                        <a href="types/type1.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 1</span>
+                            <span class="ennea-code">Reformcu</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+                <a href="tests.html">Testler</a>
+                <a href="contact.html">İletişim</a>
+            </nav>
+
+        </div>
+    </header>
+<main class="results">
+  <div class="results-top">
+    <div>
+      <h1>Sonuçların</h1>
+      <p class="results-sub">Sonuçlarını incele, ennegram tipini ve tritype’ını gör.</p>
+    </div>
+  </div>
+
+  <section class="results-grid">
+
+    <article class="card profile-card">
+      <div class="card-head">
+        <h2 class="card-title">Enneagramın</h2>
+      </div>
+
+      <div class="profile-body">
+        <div class="avatar-box">
+
+          <div class="avatar-placeholder">
+            <p id="placeholder"></p>
+          </div>
+        </div>
+
+        <h3 class="big-type" id="mainTypeText">—</h3>
+        <p class="muted" id="mainTypeDesc">—</p>
+
+        <a class="learn-link" id="learnMore" href="types/type1.html">Daha Fazlası →</a>
+      </div>
+    </article>
+
+    <article class="card traits-card">
+      <div class="card-head">
+        <h2 class="card-title">Skorların</h2>
+      </div>
+
+
+      <div class="trait-list" id="traitList"></div>
+    </article>
+
+
+    <article class="card summary-card">
+      <div class="card-head">
+        <h2 class="card-title">Özet</h2>
+      </div>
+
+      <div class="summary-body">
+        <p class="muted">Enneagram tipin:</p>
+        <p class="big-number" id="dominantType">0</p>
+
+        <p class="muted">Tritype'ın:</p>
+        <p class="big-number" id="dominantTri">000</p>
+
+        <div class="divider"></div>
+
+
+      </div>
+    </article>
+  </section>
+
+  <section class="share-card">
+    <div>
+      <h2 class="card-title">Sonuçlarını Paylaş</h2>
+      <p class="muted">Linkini kopyalayıp paylaşabilirsin.</p>
+    </div>
+
+    <div class="share-row">
+      <input class="share-input" id="shareUrl" value="https://psykey.example/results" readonly>
+      <button class="primary-btn" type="button" id="copyBtn">Kopyala</button>
+    </div>
+  </section>
+  <br>
+  <br>
+    <a href="tests.html" class="continue" id="restart">Testi Yeniden Başlat </a>
+</main>
+    <footer>
+        Hakları Saklıdır!
+    </footer>
+<script>
+
+  const p1 = Number(localStorage.getItem("test_page_1") || 0);
+  const p2 = Number(localStorage.getItem("test_page_2") || 0);
+  const p3 = Number(localStorage.getItem("test_page_3") || 0);
+  const p4 = Number(localStorage.getItem("test_page_4") || 0);
+  const p5 = Number(localStorage.getItem("test_page_5") || 0);
+  const p6 = Number(localStorage.getItem("test_page_6") || 0);
+  const p7 = Number(localStorage.getItem("test_page_7") || 0);
+  const p8 = Number(localStorage.getItem("test_page_8") || 0);
+  const p9 = Number(localStorage.getItem("test_page_9") || 0);
+
+const scores = [p1,p2,p3,p4,p5,p6,p7,p8,p9];
+
+
+let bestIndex = 0;
+for (let i = 1; i < scores.length; i++) {
+  if (scores[i] > scores[bestIndex]) bestIndex = i;
+}
+
+
+const enneagramType = bestIndex + 1;
+const gut = [8,9,1];
+const heart = [2,3,4];
+const head = [5,6,7];
+
+function bestTypeOf(group) {
+  let best = group[0];
+  for (const t of group) {
+    if (scores[t-1] > scores[best-1]) best = t;
+  }
+  return best;
+}
+
+const tGut = bestTypeOf(gut);
+const tHeart = bestTypeOf(heart);
+const tHead = bestTypeOf(head);
+
+const typee = [tGut, tHeart, tHead];
+
+typee.sort((a, b) => scores[b-1] - scores[a-1]);
+
+const w = typee[0];
+const y = typee[1];
+const z = typee[2];
+const tritype = `${w}${y}${z}`;
+
+
+const typeNames = {
+  1:"Reformcu", 2:"Yardımcı", 3:"Başarılı", 4:"Özgün",
+  5:"Araştırmacı", 6:"Sadık", 7:"Hevesli", 8:"Mücadeleci", 9:"Barışçıl"
+};
+const typeExp = {
+    1:"Rasyonel, idealist tip: İlkeli, amaçlı, öz denetimli ve mükemmeliyetçi.",
+    2:"Şefkatli, kişilerarası tip: Gösterişli, cömert, memnun edici ve sahiplenici.",
+    3:"Başarı odaklı, pragmatik tip: Uyumlu, hırslı, verimli ve imaj odaklı.",
+    4:"Hassas, içe dönük tip: Duygusal, dramatik, bireysel ve değişken.",
+    5:"Yoğun, zihinsel tip: Gözlemci, yenilikçi, mesafeli ve bağımsız.",
+    6:"Bağlı, güven odaklı tip: Sorumlu, şüpheci, hazırlıklı ve endişeli.",
+    7:"Meşgul, eğlence odaklı tip: Spontane, çok yönlü, dağınık ve dikkatsiz.",
+    8:"Güçlü, baskın tip: Özgüvenli, kararlı, korumacı ve çatışmacı.",
+    9:"Rahat, uyumlu tip: Duyarlı, güven verici, uyum sağlayan ve pasif-agresif olabilen."
+}
+const typeemoji = {
+    1:"🧭",
+    2:"🤝",
+    3:"🏆",
+    4:"🎨",
+    5:"🧠",
+    6:"🛡️",
+    7:"🎈",
+    8:"🦁",
+    9:"🕊️"
+}
+
+document.getElementById("dominantType").textContent = enneagramType;
+document.getElementById("dominantTri").textContent = tritype;
+
+
+const mainTypeText = document.getElementById("mainTypeText");
+const mainTypeDesc = document.getElementById("mainTypeDesc");
+const learnMore = document.getElementById("learnMore");
+const placeholder = document.getElementById("placeholder");
+
+mainTypeText.textContent = `${typeNames[enneagramType]} (Tip ${enneagramType})`;
+mainTypeDesc.textContent = `${typeExp[enneagramType]}`;
+placeholder.textContent = `${typeemoji[enneagramType]}`;
+learnMore.href = `types/type${enneagramType}.html`;
+
+
+const traitList = document.getElementById("traitList");
+const maxScore = Math.max(...scores, 1);
+
+traitList.innerHTML = ""; 
+for (let t = 1; t <= 9; t++){
+  const val = scores[t-1];
+  
+  let w = (val / maxScore) * 100;
+  if (w<0)
+  {
+    w = 0;
+  }
+
+  const row = document.createElement("div");
+  row.className = "trait";
+  row.innerHTML = `
+    <div class="trait-top">
+      <div class="trait-name">Tip ${t} · ${typeNames[t]}</div>
+      <div class="trait-val">${val}</div>
+    </div>
+    <div class="bar" style="--w:${w.toFixed(1)}%"></div>
+  `;
+  traitList.appendChild(row);
+}
+
+
+const copy = (text) => navigator.clipboard?.writeText(text);
+
+const shareUrlEl = document.getElementById("shareUrl");
+shareUrlEl.value = window.location.href;
+
+document.getElementById("copyBtn")?.addEventListener("click", () => copy(shareUrlEl.value));
+document.getElementById("copyLink")?.addEventListener("click", () => copy(shareUrlEl.value));
+
+
+
+    document.getElementById("restart").addEventListener("click", () => {
+    localStorage.removeItem("test_page_1");
+    localStorage.removeItem("test_page_2");
+    localStorage.removeItem("test_page_3");
+    localStorage.removeItem("test_page_4");
+    localStorage.removeItem("test_page_5");
+    localStorage.removeItem("test_page_6");
+    localStorage.removeItem("test_page_7");
+    localStorage.removeItem("test_page_8");
+    localStorage.removeItem("test_page_9");
+    });
+</script>
+</body>
+
+</html>
+
+=======
+>>>>>>> temp-branch
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PsyKey | MBTI & Enneagram</title>
+
+    <script src="https://kit.fontawesome.com/b3ce117555.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="site/result.css">
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="brand">
+                <img src="logo.png" alt="PsyKey Logo" class="logo">
+                <h2 class="site-title">PSYKEY</h2>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Ana Sayfa</a>
+    <ul class="demo-dropdown">
+        <li class="dropdown-item">
+            <a href="ennegram.html">Enneagram <i class="fa-solid fa-angle-down arr-down"></i></a>
+            
+            <ul class="ennea-menu">
+                <li class="ennea-group">
+                    <h3>Duygu Tipleri</h3>
+                    <p>İlişki ve yakınlık odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type2.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 2</span>
+                            <span class="ennea-code">Yardımcı</span>
+                        </a>
+                        <a href="types/type3.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 3</span>
+                            <span class="ennea-code">Başarılı</span>
+                        </a>
+                        <a href="types/type4.html" class="ennea-pill ennea-pink">
+                            <span class="ennea-name">Tip 4</span>
+                            <span class="ennea-code">Özgün</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="ennea-group">
+                    <h3>Kafa Tipleri</h3>
+                    <p>Güvenlik ve zihinsel analiz odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type5.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 5</span>
+                            <span class="ennea-code">Araştırmacı</span>
+                        </a>
+                        <a href="types/type6.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 6</span>
+                            <span class="ennea-code">Sadık</span>
+                        </a>
+                        <a href="types/type7.html" class="ennea-pill ennea-blue">
+                            <span class="ennea-name">Tip 7</span>
+                            <span class="ennea-code">Hevesli</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="ennea-group">
+                    <h3>Beden Tipleri</h3>
+                    <p>Kontrol, güç ve sezgisel tepki odaklı tipler.</p>
+
+                    <div class="ennea-types">
+                        <a href="types/type8.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 8</span>
+                            <span class="ennea-code">Mücadeleci</span>
+                        </a>
+                        <a href="types/type9.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 9</span>
+                            <span class="ennea-code">Barışçıl</span>
+                        </a>
+                        <a href="types/type1.html" class="ennea-pill ennea-gold">
+                            <span class="ennea-name">Tip 1</span>
+                            <span class="ennea-code">Reformcu</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+                <a href="tests.html">Testler</a>
+                <a href="contact.html">İletişim</a>
+            </nav>
+
+        </div>
+    </header>
+<main class="results">
+  <div class="results-top">
+    <div>
+      <h1>Sonuçların</h1>
+      <p class="results-sub">Sonuçlarını incele, ennegram tipini ve tritype’ını gör.</p>
+    </div>
+  </div>
+
+  <section class="results-grid">
+
+    <article class="card profile-card">
+      <div class="card-head">
+        <h2 class="card-title">Enneagramın</h2>
+      </div>
+
+      <div class="profile-body">
+        <div class="avatar-box">
+
+          <div class="avatar-placeholder">
+            <p id="placeholder"></p>
+          </div>
+        </div>
+
+        <h3 class="big-type" id="mainTypeText">—</h3>
+        <p class="muted" id="mainTypeDesc">—</p>
+
+        <a class="learn-link" id="learnMore" href="types/type1.html">Daha Fazlası →</a>
+      </div>
+    </article>
+
+    <article class="card traits-card">
+      <div class="card-head">
+        <h2 class="card-title">Skorların</h2>
+      </div>
+
+
+      <div class="trait-list" id="traitList"></div>
+    </article>
+
+
+    <article class="card summary-card">
+      <div class="card-head">
+        <h2 class="card-title">Özet</h2>
+      </div>
+
+      <div class="summary-body">
+        <p class="muted">Enneagram tipin:</p>
+        <p class="big-number" id="dominantType">0</p>
+
+        <p class="muted">Tritype'ın:</p>
+        <p class="big-number" id="dominantTri">000</p>
+
+        <div class="divider"></div>
+
+
+      </div>
+    </article>
+  </section>
+
+  <section class="share-card">
+    <div>
+      <h2 class="card-title">Sonuçlarını Paylaş</h2>
+      <p class="muted">Linkini kopyalayıp paylaşabilirsin.</p>
+    </div>
+
+    <div class="share-row">
+      <input class="share-input" id="shareUrl" value="https://psykey.example/results" readonly>
+      <button class="primary-btn" type="button" id="copyBtn">Kopyala</button>
+    </div>
+  </section>
+  <br>
+  <br>
+    <a href="tests.html" class="continue" id="restart">Testi Yeniden Başlat </a>
+</main>
+    <footer>
+        Hakları Saklıdır!
+    </footer>
+<script>
+
+  const p1 = Number(localStorage.getItem("test_page_1") || 0);
+  const p2 = Number(localStorage.getItem("test_page_2") || 0);
+  const p3 = Number(localStorage.getItem("test_page_3") || 0);
+  const p4 = Number(localStorage.getItem("test_page_4") || 0);
+  const p5 = Number(localStorage.getItem("test_page_5") || 0);
+  const p6 = Number(localStorage.getItem("test_page_6") || 0);
+  const p7 = Number(localStorage.getItem("test_page_7") || 0);
+  const p8 = Number(localStorage.getItem("test_page_8") || 0);
+  const p9 = Number(localStorage.getItem("test_page_9") || 0);
+
+const scores = [p1,p2,p3,p4,p5,p6,p7,p8,p9];
+
+
+let bestIndex = 0;
+for (let i = 1; i < scores.length; i++) {
+  if (scores[i] > scores[bestIndex]) bestIndex = i;
+}
+
+
+const enneagramType = bestIndex + 1;
+const gut = [8,9,1];
+const heart = [2,3,4];
+const head = [5,6,7];
+
+function bestTypeOf(group) {
+  let best = group[0];
+  for (const t of group) {
+    if (scores[t-1] > scores[best-1]) best = t;
+  }
+  return best;
+}
+
+const tGut = bestTypeOf(gut);
+const tHeart = bestTypeOf(heart);
+const tHead = bestTypeOf(head);
+
+const typee = [tGut, tHeart, tHead];
+
+typee.sort((a, b) => scores[b-1] - scores[a-1]);
+
+const w = typee[0];
+const y = typee[1];
+const z = typee[2];
+const tritype = `${w}${y}${z}`;
+
+
+const typeNames = {
+  1:"Reformcu", 2:"Yardımcı", 3:"Başarılı", 4:"Özgün",
+  5:"Araştırmacı", 6:"Sadık", 7:"Hevesli", 8:"Mücadeleci", 9:"Barışçıl"
+};
+const typeExp = {
+    1:"Rasyonel, idealist tip: İlkeli, amaçlı, öz denetimli ve mükemmeliyetçi.",
+    2:"Şefkatli, kişilerarası tip: Gösterişli, cömert, memnun edici ve sahiplenici.",
+    3:"Başarı odaklı, pragmatik tip: Uyumlu, hırslı, verimli ve imaj odaklı.",
+    4:"Hassas, içe dönük tip: Duygusal, dramatik, bireysel ve değişken.",
+    5:"Yoğun, zihinsel tip: Gözlemci, yenilikçi, mesafeli ve bağımsız.",
+    6:"Bağlı, güven odaklı tip: Sorumlu, şüpheci, hazırlıklı ve endişeli.",
+    7:"Meşgul, eğlence odaklı tip: Spontane, çok yönlü, dağınık ve dikkatsiz.",
+    8:"Güçlü, baskın tip: Özgüvenli, kararlı, korumacı ve çatışmacı.",
+    9:"Rahat, uyumlu tip: Duyarlı, güven verici, uyum sağlayan ve pasif-agresif olabilen."
+}
+const typeemoji = {
+    1:"🧭",
+    2:"🤝",
+    3:"🏆",
+    4:"🎨",
+    5:"🧠",
+    6:"🛡️",
+    7:"🎈",
+    8:"🦁",
+    9:"🕊️"
+}
+
+document.getElementById("dominantType").textContent = enneagramType;
+document.getElementById("dominantTri").textContent = tritype;
+
+
+const mainTypeText = document.getElementById("mainTypeText");
+const mainTypeDesc = document.getElementById("mainTypeDesc");
+const learnMore = document.getElementById("learnMore");
+const placeholder = document.getElementById("placeholder");
+
+mainTypeText.textContent = `${typeNames[enneagramType]} (Tip ${enneagramType})`;
+mainTypeDesc.textContent = `${typeExp[enneagramType]}`;
+placeholder.textContent = `${typeemoji[enneagramType]}`;
+learnMore.href = `types/type${enneagramType}.html`;
+
+
+const traitList = document.getElementById("traitList");
+const maxScore = Math.max(...scores, 1);
+
+traitList.innerHTML = ""; 
+for (let t = 1; t <= 9; t++){
+  const val = scores[t-1];
+  
+  let w = (val / maxScore) * 100;
+  if (w<0)
+  {
+    w = 0;
+  }
+
+  const row = document.createElement("div");
+  row.className = "trait";
+  row.innerHTML = `
+    <div class="trait-top">
+      <div class="trait-name">Tip ${t} · ${typeNames[t]}</div>
+      <div class="trait-val">${val}</div>
+    </div>
+    <div class="bar" style="--w:${w.toFixed(1)}%"></div>
+  `;
+  traitList.appendChild(row);
+}
+
+
+const copy = (text) => navigator.clipboard?.writeText(text);
+
+const shareUrlEl = document.getElementById("shareUrl");
+shareUrlEl.value = window.location.href;
+
+document.getElementById("copyBtn")?.addEventListener("click", () => copy(shareUrlEl.value));
+document.getElementById("copyLink")?.addEventListener("click", () => copy(shareUrlEl.value));
+
+
+
+    document.getElementById("restart").addEventListener("click", () => {
+    localStorage.removeItem("test_page_1");
+    localStorage.removeItem("test_page_2");
+    localStorage.removeItem("test_page_3");
+    localStorage.removeItem("test_page_4");
+    localStorage.removeItem("test_page_5");
+    localStorage.removeItem("test_page_6");
+    localStorage.removeItem("test_page_7");
+    localStorage.removeItem("test_page_8");
+    localStorage.removeItem("test_page_9");
+    });
+</script>
+</body>
+
+</html>
+
+<<<<<<< HEAD
+=======
+>>>>>>> f6e1af7 (İlk commit)
+>>>>>>> temp-branch
