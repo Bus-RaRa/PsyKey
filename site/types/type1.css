@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 html{
   scroll-padding-top: 120px;
 }
@@ -350,12 +347,7 @@ footer
   text-align: center;
   font-size: 0.8rem;
   color: #9a9ab8;
-=======
->>>>>>> temp-branch
-html{
-  scroll-padding-top: 120px;
 }
-
 *
 {
   box-sizing: border-box;
@@ -701,8 +693,41 @@ footer
   text-align: center;
   font-size: 0.8rem;
   color: #9a9ab8;
-<<<<<<< HEAD
-=======
->>>>>>> f6e1af7 (İlk commit)
->>>>>>> temp-branch
+}
+.type-card {
+    cursor: pointer;
+}
+
+/* Modal arka planı */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Büyütülen resim stili */
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+/* Kapatma butonu */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
